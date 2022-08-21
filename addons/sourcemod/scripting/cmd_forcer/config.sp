@@ -101,7 +101,7 @@ stock KeyValues LoadDataConfig()
     ArrayList array = new ArrayList(128, _);
 
     kv.Rewind();
-    if(kv.GotoFirstSubKey())
+    if(kv.GotoFirstSubKey(false))
     {
         do
         {
@@ -115,7 +115,7 @@ stock KeyValues LoadDataConfig()
 
             array.PushString(key);
         }
-        while(kv.GotoNextKey());
+        while(kv.GotoNextKey(false));
     }
     delete array;
     //
