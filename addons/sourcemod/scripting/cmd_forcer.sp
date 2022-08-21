@@ -63,7 +63,7 @@ public Action PlayerSay_Listener(int client, const char[] command, int argc)
     {
         SetCmdReplySource(SM_REPLY_TO_CHAT);
         FakeClientCommandEx(client, "%s %s", replaceCommand, temp[1]);
-        LogMessage("%s %s", replaceCommand, temp[1]);
+        // LogMessage("%s %s", replaceCommand, temp[1]);
         return slient ? Plugin_Handled : Plugin_Continue;
     }
 
